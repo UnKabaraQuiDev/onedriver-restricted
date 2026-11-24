@@ -133,7 +133,7 @@ func (a *Auth) Refresh() {
 func getAuthURL(a AuthConfig) string {
 	return a.CodeURL +
 		"?client_id=" + a.ClientID +
-		"&scope=" + url.PathEscape("user.read files.readwrite.all offline_access") +
+		"&scope=" + url.PathEscape("user.read files.readwrite offline_access") +
 		"&response_type=code" +
 		"&redirect_uri=" + a.RedirectURL
 }
